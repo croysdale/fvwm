@@ -1,0 +1,55 @@
+##################
+## Key Bindings ##
+##################
+
+Ctrl | Shift | Alt | Key    | Function  | Description
+===========================================================================
+Ctrl | Shift |     | 1-8    | Goto      | Go to Desk
+Ctrl | Shift |     | Arrow  | Goto      | Go to Desk/Page
+===========================================================================
+Ctrl | Shift | Alt | 1-8    | Move To   | Move to Desk
+Ctrl | Shift | Alt | Arrow  | Move To   | Move to Desk/Page
+===========================================================================
+Ctrl |       | Alt | g      | Maximize  | Toggle grow window
+Ctrl | Shift | Alt | g      | Maximize  | Toggle grow window (Vertical)
+Ctrl |       | Alt | m      | Maximize  | Toggle Maximize window
+Ctrl | Shift | Alt | m      | Maximize  | Fully Maximize window 
+Ctrl |       | Alt | Arrow  | Maximize  | Maximize on left/right of screen
+Ctrl |       | Alt | Arrow  | Maximize  | Raise (up) / Lower (down)
+Ctrl | Shift | Alt | Right  | Maximize  | Maximize on right of 2nd screen
+Ctrl |       | Alt | i      | Iconify   | Create Thumbnail and Iconify
+===========================================================================
+     |       | Alt | 8      | Resize    | Resize to 80 columns
+     | Shift | Alt | Arrow  | Resize    | Resize bot/right of window 
+===========================================================================
+     |       | Alt | NumKey | Move      | Move window into a 3x3 grid 
+===========================================================================
+     |       | Alt | r      | Restart   | Restart
+Ctrl |       | Alt | L      | Monitor   | Set mode to laptop
+Ctrl |       | Alt | D      | Monitor   | Set mode to dual monitor
+===========================================================================
+
+###########################
+## Vim-like Key Bindings ##
+###########################
+Ctrl | Shift | Alt | Key    | Function  | Description
+===========================================================================
+Ctrl | Shift |     | hjkl   | Goto      | Go to Desk/Page
+Ctrl | Shift | Alt | hjkl   | Move To   | Move to Desk/Page
+     | Shift | Alt | hjkl   | Resize    | Resize bot/right of window 
+Ctrl |       | Alt | hl     | Maximize  | Maximize on left/right of screen
+Ctrl |       | Alt | hl     | Maximize  | Maximize on left/right of screen
+Ctrl |       | Alt | jk     | Maximize  | Raise (up) / Lower (down)
+Ctrl | Shift | Alt | l      | Maximize  | Maximize on right of 2nd screen
+===========================================================================
+
+####################
+## Mouse Bindings ##
+####################
+
+##################
+## Local Config ##
+##################
+$HOME/.fvwm/local_config
+
+

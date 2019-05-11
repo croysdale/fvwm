@@ -1,0 +1,111 @@
+################
+# Arctic Theme #
+################
+
+#####
+# Colorsets (matching the fvwm-theme policy
+# http://fvwm-themes.sourceforge.net/doc/colorsets
+###########
+# Inactive windows
+Colorset 0  fg #461D7C, bg white, sh #461D7C, Plain, NoShape
+# Active windows
+Colorset 1  fg #461D7C, bg white, sh #461D7C, Plain, NoShape
+# Pixmap menu 
+Colorset 5  fg #2b0c56, bg white, Plain, NoShape, \
+	    Shape   $[fvwm_theme_img]/menu_shape.xpm
+# Hilighted menu item
+Colorset 6 fg #2b0c56, bg  #baafd3, Plain, NoShape
+# Background of IconMan
+Colorset 12 fg lightgray, bg lightgray, sh lightgray, fgsh darkgray, \
+	    Pixmap  $[fvwm_theme_img]/im_bg.png
+# Pager normal
+Colorset 14 fg yellow,bg black, Plain, NoShape, \
+	#    Pixmap  $[fvwm_theme_img]/pa_bgoff.png
+# Pager hilighted
+Colorset 15 fg white, bg #461D7C, sh #461D7C, Plain, NoShape, \
+	    Pixmap  $[fvwm_theme_img]/pa_bgon.png
+# Pager ballon
+Colorset 16 fg white, bg rgb:05/46/a0
+# Item standard of IconMan/TaskBar
+Colorset 17 fg #461D7C, bg lightgrey, sh lightgrey, Plain, NoShape \
+# Item active of IconMan/TaskBar
+Colorset 18 fg #9E2387, bg lightgrey, sh lightgrey, Plain, NoShape \
+# Ident
+Colorset 21 bg white, fg white, sh white, fgsh rgb:05/46/a0, \
+	    RootTransparent buffer, Tint rgb:05/46/a0 60
+# Button Bar (TopBar)
+Colorset 23 fg white, fg white, \
+	    Shape   $[fvwm_theme_img]/topbar_shape_1280.xpm
+# Pager mini windows normal
+Colorset 40 fg #9E2387, bg lightgrey, hi white
+# Pager mini windows higlighted
+Colorset 41 fg #9E2387, bg yellow, hi white
+# Dock main
+Colorset 50 fg white, bg white, sh white, fgsh rgb:05/46/a0, \
+	    Pixmap  $[fvwm_theme_img]/dock.png, \
+	    Shape   $[fvwm_theme_img]/dock_shape.xpm
+# Dock applet on the left, upper part
+Colorset 51 fg white, bg white, sh white, fgsh rgb:05/46/a0, \
+	    Pixmap  $[fvwm_theme_img]/dock_scriptbgleftup.png
+# Dock applet on the left, upper part
+Colorset 52 fg white, bg white, sh white, fgsh rgb:05/46/a0, \
+	    Pixmap  $[fvwm_theme_img]/dock_scriptbgleftdown.png
+# Dock applet on the middle, upper part
+Colorset 53 fg white, bg white, sh white, fgsh rgb:05/46/a0, \
+	    Pixmap  $[fvwm_theme_img]/dock_scriptbgmidup.png
+# Dock applet on the middle, upper part
+Colorset 54 fg white, bg white, sh white, fgsh rgb:05/46/a0, \
+	    Pixmap  $[fvwm_theme_img]/dock_scriptbgmiddown.png
+# Dock applet on the right, hour
+Colorset 55 fg white, bg white, sh white, fgsh rgb:05/46/a0, \
+	    Pixmap  $[fvwm_theme_img]/dock_scriptbgrighthour.png
+# Dock applet on the right, minute
+Colorset 56 fg white, bg white, sh white, fgsh rgb:05/46/a0, \
+	    Pixmap  $[fvwm_theme_img]/dock_scriptbgrightmin.png
+# Dock applet on the right, AM/PM
+Colorset 57 fg rgb:05/46/a0, bg white, sh white, \
+	    Pixmap  $[fvwm_theme_img]/dock_scriptbgrightampm.png
+# Dock applet on the right, minute
+Colorset 58 fg rgb:05/46/a0, bg white, sh white, fgsh darkgrey, \
+	    Pixmap  $[fvwm_theme_img]/dock_scriptbgrightdate.png
+# Other menu
+Colorset 60 fg #461D7C, bg white, hi rgb:05/46/a0, sh rgb:05/46/a0, Plain, NoShape \
+	    fgsh rgb:05/46/a0
+
+#####
+# Window decoration
+###########
+#Style * Borderwidth 0, NoHandles
+Style "*" BorderWidth 4, HandleWidth 4
+Style *	Button 1, Button 2, Button 4, Button 6, GrabFocusOff
+Style *	Colorset 0, HilightColorset 1
+#Style * Font "Shadow=1 C:xft:Blippo:pixelsize=16"
+#Style "*" Font "-*-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*,-*-fixed-medium-r-normal-*-14-*-*-*-*-*-*-*,-*-*-medium-r-normal-*-16-*-*-*-*-*-*-*"
+
+DestroyDecor	Default
+AddToDecor	Default
++ BorderStyle	Simple -- HiddenHandles NoInset
++ TitleStyle	LeftJustified Height 28 -- flat
++ ButtonStyle	Reset
++ ButtonStyle	All Active (Colorset 0 -- flat) Inactive (Colorset 1 -- flat)
+  
++ AddButtonStyle    1	    AdjustedPixmap $[fvwm_theme_img]/tb_leftend.png -- flat
++ AddButtonStyle    1	    MiniIcon
+
++ AddTitleStyle Active	    MultiPixmap LeftButtons	AdjustedPixmap	$[fvwm_theme_img]/tb_leftend.png, \
+					LeftEnd		AdjustedPixmap	$[fvwm_theme_img]/tb_titlelefton.png, \
+					Main		TiledPixmap	$[fvwm_theme_img]/tb_titlemainon.png, \
+					RightEnd	AdjustedPixmap	$[fvwm_theme_img]/tb_titlerighton.png
++ AddTitleStyle	Inactive    MultiPixmap LeftButtons	AdjustedPixmap	$[fvwm_theme_img]/tb_leftend.png, \
+					LeftEnd		AdjustedPixmap	$[fvwm_theme_img]/tb_titleleftoff.png, \
+					Main		TiledPixmap	$[fvwm_theme_img]/tb_titlemainoff.png, \
+					RightEnd	AdjustedPixmap	$[fvwm_theme_img]/tb_titlerightoff.png
+
++ AddButtonStyle    6	    Active	Pixmap $[fvwm_theme_img]/tb_minon.png -- flat
++ AddButtonStyle    6	    Inactive	Pixmap $[fvwm_theme_img]/tb_minoff.png -- flat
+
++ AddButtonStyle    4	    Active	Pixmap $[fvwm_theme_img]/tb_maxon.png -- flat
++ AddButtonStyle    4	    Inactive	Pixmap $[fvwm_theme_img]/tb_maxoff.png -- flat
+
++ AddButtonStyle    2	    Active	Pixmap $[fvwm_theme_img]/tb_closeon.png -- flat
++ AddButtonStyle    2	    Inactive	Pixmap $[fvwm_theme_img]/tb_closeoff.png -- flat
